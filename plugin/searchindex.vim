@@ -172,7 +172,7 @@ function! s:PrintMatches()
     " If there are no matches, search fails before we get here. The only way
     " we could see zero results is on 'g/' (but that's a reasonable result).
     let [current, total] = searchindex#MatchCounts()
-    let msg = '[' . current . '/' . total . ']  ' . dir_char . @/
+    let msg = dir_char . @/ . ' (' . current . ' of ' . total . ')'
   endif
 
   echo msg
